@@ -1,0 +1,14 @@
+Client.class
+fr\digi\banque\AssuranceVie.class
+App.class
+fr\digi\banque\Virement.class
+Emprunt.class
+fr\digi\banque\Adresse.class
+fr\digi\banque\Banque.class
+TestBibliotheque.class
+fr\digi\banque\TestBanque.class
+fr\digi\banque\Operation.class
+Livre.class
+fr\digi\banque\Compte.class
+fr\digi\banque\LivretA.class
+fr\digi\banque\ClientBanque.class

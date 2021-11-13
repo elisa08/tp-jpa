@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+  <persistence-unit name="test-jpa">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url"
+                value="jdbc:mariadb://localhost:3306/compta" />
+      <property name="javax.persistence.jdbc.user" value="root" />
+      <property name="javax.persistence.jdbc.password"
+                value="elisa" />
+      <property name="javax.persistence.jdbc.driver"
+                value="org.mariadb.jdbc.Driver" />
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="test-jpa-banque">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>fr.digi.banque.Banque</class>
+    <class>fr.digi.banque.ClientBanque</class>
+    <class>fr.digi.banque.Compte</class>
+    <class>fr.digi.banque.LivretA</class>
+    <class>fr.digi.banque.AssuranceVie</class>
+    <class>fr.digi.banque.Operation</class>
+    <class>fr.digi.banque.Virement</class>
+    <properties>
+      <property name="hibernate.archive.autodetection" value="" />
+      <property name="javax.persistence.jdbc.url"
+                value="jdbc:mariadb://localhost:3306/banque" />
+      <property name="javax.persistence.jdbc.user" value="root" />
+      <property name="javax.persistence.jdbc.password"
+                value="elisa" />
+      <property name="javax.persistence.jdbc.driver"
+                value="org.mariadb.jdbc.Driver" />
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+    </properties>
+  </persistence-unit>
+</persistence>
